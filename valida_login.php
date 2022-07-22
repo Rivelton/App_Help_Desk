@@ -3,7 +3,9 @@
 	
 	session_start();
 
-
+	echo "<pre>";
+	echo $_SESSION['y'];
+	echo "</pre>";
 	//usuarios do sistema
 
 	$_POST['email'];
@@ -37,8 +39,8 @@
 	}
 
 	if ($usuarios_autenticado) {
-		echo 'Usuário autenticado';
 		$_SESSION['autenticado'] = 'SIM';//variavel que verificar se esta ou não logado.
+		header('Location: home.php');
 	} else {
 		// header, redireciona para a pagina definida, e depois do ? defini um parametro, para o $_GET
 		$_SESSION['autenticado'] = 'NÃO';//variavel que verificar se esta ou não logado.
