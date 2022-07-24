@@ -25,6 +25,6 @@
 	//echo $texto;
 
 	//redirecionamento
-	header('Location: abrir_chamado.php')
+	header('Location: abrir_chamado.php');
 
 ?>
